@@ -22,6 +22,8 @@
        77 NUMEROX-SINAL PIC S9(18).
        77 NUMEROX-DECIMAL PIC 9(05)V9(02).
        77 WRK-DATA PIC 9(6) VALUE ZEROS.
+       77 WRK-VALOR PIC 9(10) VALUE 10.
+
 
       *VARIÁVEL ALFABETICA
        77 NOMEX PIC A(20).
@@ -53,6 +55,7 @@
 
        MAIN-PROCEDURE.
 
+            MOVE 19 TO WRK-VALOR.
             ACCEPT WRK-DATA FROM DATE.
             DISPLAY "Nome:"NOME .
             DISPLAY "RG:"RG.
@@ -63,6 +66,7 @@
             SET MASCULINO TO TRUE.
             DISPLAY "Genero:"GENERO.
             DISPLAY WRK-DATA.
+            DISPLAY WRK-VALOR.
             STOP RUN.
 
        END PROGRAM PROG0001.
